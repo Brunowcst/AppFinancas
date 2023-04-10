@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Contacts from './components/pages/Contacts';
 import Home from './components/pages/Home';
@@ -7,8 +6,8 @@ import Company from './components/pages/Company';
 import NewProject from './components/pages/NewProject';
 import ErrorPage from './components/pages/ErrorPage';
 import NavBar from './components/NavBar';
+import Container from './components/layout/Container';
 
-import './app.css';
 
 function App() {
 
@@ -16,13 +15,15 @@ function App() {
     <>
     <Router>
       <NavBar/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='contacts' element={<Contacts/>}/>
-          <Route path='newproject' element={<NewProject/>}/>
-          <Route path='company' element={<Company/>}/>
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
+      <Container customClass="min-height">
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='contacts' element={<Contacts/>}/>
+            <Route path='newproject' element={<NewProject/>}/>
+            <Route path='company' element={<Company/>}/>
+            <Route path="*" element={<ErrorPage/>} />
+          </Routes>
+        </Container>
         <p>footer</p>
     </Router>
   </>
