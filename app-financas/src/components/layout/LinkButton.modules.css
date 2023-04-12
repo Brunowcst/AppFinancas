@@ -1,0 +1,11 @@
+.link_button {
+    background-color: #222;
+    text-decoration: none;
+    padding: 0.4rem;
+    color: #ffbb33;
+    opacity: 0.94;
+}
+
+.link_button:hover {
+    opacity: 1;
+}
