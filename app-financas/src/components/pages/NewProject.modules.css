@@ -1,0 +1,13 @@
+.cad_projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cad_projeto h1 {
+    padding-bottom: .5rem;
+}
+
+.cad_projeto p {
+    padding-bottom: 1rem;
+}
