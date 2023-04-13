@@ -1,0 +1,14 @@
+.botao_enviar {
+    background-color: #222;
+    color: #ffbb33;
+    text-decoration: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .95;
+}
+
+.botao_enviar:hover {
+    opacity: 1;
+}
