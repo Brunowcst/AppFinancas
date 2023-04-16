@@ -1,6 +1,5 @@
 import {FaFacebook, FaInstagram, FaGithub} from 'react-icons/fa'
-import Container from "./Container";
-import styles from "./Footer.modules.css";
+import "./Footer.modules.css";
 
 function Footer() {
     return (
@@ -8,10 +7,10 @@ function Footer() {
             <ul className='lista_icons'>
                 <li className='item_icon'><FaFacebook/></li>
 
-                <a href="https://www.instagram.com/brwnocp/" target="_blank">
+                <a href="https://www.instagram.com/brwnocp/" target="_blank" rel="noopener noreferrer">
                     <li className='item_icon'><FaInstagram/></li>
                 </a>
-                <a href="https://github.com/Brunowcst" target="_blank">
+                <a href="https://github.com/Brunowcst" target="_blank" rel="noopener noreferrer">
                     <li className='item_icon'><FaGithub/></li>
                 </a>
             </ul>
