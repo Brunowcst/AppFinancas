@@ -1,6 +1,16 @@
 {
   "projects": [
-
+    {
+      "name": "Repy",
+      "budget": "1000000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 1
+    }
   ],
   "categories": [
     {
