@@ -8,9 +8,10 @@ function Input({type, text, placeholder, name, value, handleOnChange}) {
             name={name} 
             placeholder={placeholder}
             onChange={handleOnChange}
-            value={value}></input>
+            value={value}
+            autoComplete="off"></input>
         </div>
     );
 }
 
-export default Input;
+export default Input; 

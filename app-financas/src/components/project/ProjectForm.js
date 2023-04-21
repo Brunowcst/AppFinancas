@@ -9,7 +9,7 @@ import "./ProjectForm.modules.css";
 function ProjectForm({btnText, handleSubmit, projectData}) {
 
     const [categories, setCategories] = useState([]);
-    const [project, setProject] = useState(projectData || []);
+    const [project, setProject] = useState(projectData || {});
 
     useEffect(() => {
         fetch("http://localhost:5000/categories", {
@@ -23,22 +23,22 @@ function ProjectForm({btnText, handleSubmit, projectData}) {
 
     const submit = (e) => {
         e.preventDefault();
-        console.log(project)
+        //console.log(project)
         handleSubmit(project)
     }
 
     function handleChange(e) {
         setProject({ ...project, [e.target.name]: e.target.value});
-        console.log(project)
+        //console.log(project)
     }
 
     function handleCategory(e) {
         setProject({ ...project, category: {
             id: e.target.value,
             name: e.target.options[e.target.selectedIndex].text,
-        },
+            },
         });
-        console.log(project)
+        //console.log(project)
     }
 
     return (

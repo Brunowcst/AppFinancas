@@ -18,9 +18,10 @@ function NewProject() {
         })
         .then((resp) => resp.json())
         .then((data) => {
-            console.log(data)
+            console.log(data);
+            navigate('/projects', {state: {message: "Projeto cadastrado com sucesso!"}});
         })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err));  
     }
 
     return (
@@ -34,4 +35,4 @@ function NewProject() {
 
 export default NewProject;
 
-//usar useNavigae() invés de useHistory()
+//usar useNavigate() invés de useHistory()
