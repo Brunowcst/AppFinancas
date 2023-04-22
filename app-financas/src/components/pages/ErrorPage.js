@@ -1,7 +1,9 @@
+import './ErroPage.modules.css'
+
 function ErrorPage() {
     return (
         <div>
-            <p>Error 404!</p>
+            <p id="teste">Error 404!</p>
         </div>
     );
 }

@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.section_home {
+    margin: 0 auto;
+}
+
 .section_home h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -22,7 +26,6 @@
 .section_home p {
     margin-bottom: 1rem;
 }
-
 
 .section_home img {
     margin-top: 2rem;

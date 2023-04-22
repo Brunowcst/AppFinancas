@@ -1,0 +1,22 @@
+.project_container {
+    width: 100%;
+    padding: 2rem;
+}
+
+.tittle_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.bbr {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.card_project {
+    width: 20rem;
+    border: 1px solid black;
+}
