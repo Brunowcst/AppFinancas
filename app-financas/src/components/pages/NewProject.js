@@ -2,12 +2,15 @@ import ProjectForm from "../project/ProjectForm";
 import "./NewProject.modules.css"
 
 import {useNavigate} from 'react-router-dom';
+import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 function NewProject() {
     const navigate = useNavigate();
 
     function createPost(project) {
         //Inicialização de props vazias
+        //project.id = uuidv4(); // gera um novo id único
         project.cost = 0
         project.services = []
 
@@ -18,8 +21,7 @@ function NewProject() {
         })
         .then((resp) => resp.json())
         .then((data) => {
-            console.log(data);
-            navigate('/projects', {state: {message: "Projeto cadastrado com sucesso!"}});
+            navigate('/projects', {state: {message: `Projeto ${data.name} cadastrado com sucesso!`  }});
         })
         .catch(err => console.log(err));  
     }

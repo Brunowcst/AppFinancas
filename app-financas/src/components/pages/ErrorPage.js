@@ -1,4 +1,4 @@
-import './ErroPage.modules.css'
+import './ErrorPage.modules.css'
 
 function ErrorPage() {
     return (

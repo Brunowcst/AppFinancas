@@ -3,7 +3,6 @@ import {useLocation} from 'react-router-dom';
 
 import styles from "./Projects.modules.css"
 import Message from "../layout/Message";
-import Container from '../layout/Container';
 import LinkButton from "../layout/LinkButton";
 import ProjectCard from "../project/ProjectCard";
 
@@ -31,7 +30,6 @@ function Projects() {
                 <h1>Projetos</h1>
                 <LinkButton to="/newproject" text="Criar Projeto"/>
             </div>
-            <Container customClass="start"><p>Projetos</p></Container>
             {message && <Message type="success" msg={message}/>}
 
             <div id="bbr">
