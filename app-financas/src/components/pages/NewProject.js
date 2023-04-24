@@ -2,8 +2,7 @@ import ProjectForm from "../project/ProjectForm";
 import "./NewProject.modules.css"
 
 import {useNavigate} from 'react-router-dom';
-import { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+//import { useState } from "react";
 
 function NewProject() {
     const navigate = useNavigate();

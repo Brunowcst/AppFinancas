@@ -1,11 +1,11 @@
 .project_card {
     position: relative;
-    width: 300px;
+    width: 280px;
     height: 200px;
     border: 1px solid #7a7a7a;
     padding: 0 2rem;
     border-radius: .6rem;
-    margin: 0.5%;
+    margin: 0.1rem;
     display: flex;
     flex-direction: column;
 }
