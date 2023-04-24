@@ -10,14 +10,16 @@
     margin-bottom: 1rem;
 }
 
-.bbr {
+.card_container {
     flex-wrap: wrap;
     gap: 1.5rem;
     display: flex;
     flex-direction: row;
 }
 
-.card_project {
-    width: 20rem;
-    border: 1px solid black;
+.msg_erro_project {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(126, 123, 123);
 }
+

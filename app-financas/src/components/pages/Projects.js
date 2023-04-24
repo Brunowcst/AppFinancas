@@ -6,9 +6,11 @@ import Message from "../layout/Message";
 import LinkButton from "../layout/LinkButton";
 import ProjectCard from "../project/ProjectCard";
 import Input from '../form/Input';
+import Loading from '../layout/Loading';
 
 function Projects() {
     const [projetos, setProjetos] = useState([]);
+    const [removeLoading, setRemoveLoading] = useState(false);
     const [search, setSearch] = useState("");
 
     const project = projetos.filter((p) =>
@@ -24,7 +26,10 @@ function Projects() {
         method:"GET",
         headers:{'Content-Type': 'application/json'}
         }).then((resp)=> resp.json())
-        .then((data) => setProjetos(data))
+        .then((data) => { 
+            setProjetos(data)
+            setRemoveLoading(true)
+        })
         .catch(err => console.log(err));
     }, []);
 
@@ -50,8 +55,8 @@ function Projects() {
             {message && <Message type="success" msg={message}/>}
 
             <div id="bbr">
-                {project.length > 0 ? (
-                    <div className="bbr">
+                {project.length > 0 &&
+                    <div className="card_container">
                         {project.map((e) => (
                             <ProjectCard key={e.id}
                             name={e.name}
@@ -59,7 +64,13 @@ function Projects() {
                             category={e.category.name}/>
                     ))}
                     </div>
-                    ): (<p>Nenhum projeto encontrado!</p>)}
+                }
+                {!removeLoading && <Loading/>}
+                {removeLoading && project.length === 0 && (
+                    <div>
+                    <p className="msg_erro_project">Nenhum projeto encontrado!</p> <p className="msg_erro_project">Verifique as infomações passadas ou se o projeto está cadastrado. </p>
+                </div>
+                )} 
             </div>
         </section>
     );
