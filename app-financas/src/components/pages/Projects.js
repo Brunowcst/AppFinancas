@@ -33,6 +33,18 @@ function Projects() {
         .catch(err => console.log(err));
     }, []);
 
+    //Deletar um projeto
+    function deleteProject(id) {
+        fetch(`http://localhost:5000/projects/${id}`, {
+            method:'DELETE',
+            headers:{'Content-Type': 'application/json'}
+            }).then((resp)=> resp.json())
+            .then((data) => { 
+                setProjetos(projetos.filter((project)=> project.id !== id))
+            })
+            .catch(err => console.log(err));
+    }
+
     //trazer a mensagem do useNavigate
     const location = useLocation();
     let message = '';
@@ -59,9 +71,11 @@ function Projects() {
                     <div className="card_container">
                         {project.map((e) => (
                             <ProjectCard key={e.id}
+                            id={e.id}
                             name={e.name}
                             budget= {Number(e.budget).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                            category={e.category.name}/>
+                            category={e.category.name}
+                            handleRemove={deleteProject}/>
                     ))}
                     </div>
                 }

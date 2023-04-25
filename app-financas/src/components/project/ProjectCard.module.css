@@ -83,3 +83,57 @@
 .infraestrutura {
     background-color: #ecd0a1;
 }
+
+.custom_modal {
+    border-color: #fff;
+    z-index: 9999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    min-width: 30%;
+    min-height: 30%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    box-shadow: 7px 10px 20px rgba(0, 0, 0, 0.61);
+}
+  
+.custom_overlay {
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_container {
+    border: none;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal_container h3 {
+    margin-bottom: 1rem;
+}
+
+.container_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons_modal {
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0.2rem;
+    font-weight: bold;
+}
