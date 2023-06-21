@@ -1,4 +1,5 @@
 import styles from "./ProjectCard.module.css";
+import {Link} from 'react-router-dom'
 import {useState} from 'react';
 import {BsPencil, BsFillTrashFill} from 'react-icons/bs';
 import Modal from 'react-modal';
@@ -22,7 +23,9 @@ function ProjectCard({name, budget, id, category, handleRemove}) {
             <div className={styles.card_cost}> <span>Custo:</span> R${budget}</div>
             <div className={styles.card_category}><span className={`${styles.category_highlighter} ${styles[category.toLowerCase()]}`}></span> {category}</div>
             <div className={styles.container_icons}>
-                <BsPencil className={styles.icon}/>
+                <Link to={`/project/${id}`}>
+                    <BsPencil className={styles.icon}/>
+                </Link>
                 <BsFillTrashFill onClick={openModal} className={styles.icon}/>
             </div>
 
