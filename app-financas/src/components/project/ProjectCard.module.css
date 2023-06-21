@@ -134,6 +134,7 @@
 .buttons_modal {
     cursor: pointer;
     border: 1px solid rgb(0, 0, 0);
-    padding: 0.2rem;
+    padding: 0.3rem;
     font-weight: bold;
+    border-radius: 10px;
 }
