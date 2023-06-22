@@ -41,11 +41,11 @@
     right: 0rem;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     justify-content: flex-end;
 }
 
 .icon {
+    color: black;
     cursor: pointer;
     font-size: 2.5rem;
     padding: 0.6rem;
@@ -137,4 +137,5 @@
     padding: 0.3rem;
     font-weight: bold;
     border-radius: 10px;
+    text-decoration: none;
 }
