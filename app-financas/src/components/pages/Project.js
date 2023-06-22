@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {useParams} from 'react-router-dom'
+import {useParams, Navigate} from 'react-router-dom'
 import Loading from '../layout/Loading';
 import Container from '../layout/Container'
 import styles from './Project.module.css'
@@ -15,7 +15,9 @@ function Project(props) {
         fetch(`http://localhost:5000/projects/${id}`, {
         method:"GET",
         headers:{'Content-Type': 'application/json'}
-        }).then((resp)=> resp.json())
+        }).then(resp => 
+            resp.json()
+        )
         .then((data) => { 
             setProject(data)
             setRemoveLoading(true)

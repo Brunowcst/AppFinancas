@@ -1,9 +1,10 @@
-import './ErrorPage.modules.css'
+import styles from './ErrorPage.module.css'
+import ErrorPageSvg from '../../img/page_not_found.svg'
 
 function ErrorPage() {
     return (
-        <div>
-            <p id="teste">Error 404!</p>
+        <div className={styles.container}>
+            <img className={styles.imageError} src={ErrorPageSvg}/>
         </div>
     );
 }
