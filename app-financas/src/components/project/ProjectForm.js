@@ -64,7 +64,7 @@ function ProjectForm({btnText, handleSubmit, projectData}) {
             value={project.category ? project.category.id : ""}/>
 
             <SubmitButton text={btnText}/>
-        </form>
+        </form> 
     );
 }
 
