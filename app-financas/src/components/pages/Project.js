@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom'
 import Loading from '../layout/Loading';
 import Container from '../layout/Container'
-import SubmitButton from '../form/SubmitButton'
+import styles from './Project.module.css'
 
 function Project(props) {
     const {id} = useParams();
@@ -33,26 +33,26 @@ function Project(props) {
     return (
         <>
         {project.name ? (
-            <div>
+            <div className={styles.mainContainer}>
                 <Container customClass="column">
                     <h2>Projeto: {project.name}</h2>
                     <button onClick={toggleProjectForm}>{!showProject ? 'Editar Projeto' : 'Fechar'}</button>
                     {!showProject ?
-                    (<div>
+                    (<div className={styles.projectsInformations}>
                         <p>
-                            <span>Categoria:</span>
+                            <span>Categoria: </span>
                             {project.category.name}
                         </p>
                         <p>
-                            <span>Orçamento Total: R$ </span>
-                            {Number(project.budget).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                            <span>Orçamento Total: </span>
+                            R$ {Number(project.budget).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </p>
                         <p>
-                            <span>Total utilizado: R$ </span>
-                            {Number(project.cost).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                            <span>Total utilizado: </span>
+                            R$ {Number(project.cost).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </p>
                     </div>
-                    ) : (<div>Aberto</div>)}
+                    ) : ("")}
                 </Container>
             </div>
         ) : (<Loading/>)}
