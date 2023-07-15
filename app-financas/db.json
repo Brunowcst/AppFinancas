@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "eeeeeeeee",
-      "budget": "3",
+      "name": "Teste",
+      "budget": "5000",
       "category": {
         "id": "1",
         "name": "Infraestrutura"
@@ -12,15 +12,37 @@
       "id": 1
     },
     {
+      "name": "Teste 2",
+      "budget": "5001",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "name": "hhhhhh",
-      "budget": "3",
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Teste 3",
+      "budget": "5002",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "Teste 4",
+      "budget": "5004",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [
